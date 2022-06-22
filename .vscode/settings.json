@@ -11,8 +11,5 @@
   ],
   "cSpell.words": [
     "composables"
-  ],
-  "[handlebars]": {
-    "editor.formatOnSave": false,
-  }
+  ]
 }
