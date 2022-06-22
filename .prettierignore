@@ -1,0 +1,10 @@
+*.hbs
+*.log*
+.cache
+.env
+.env.*
+.nitro
+.nuxt
+.output
+dist
+node_modules
