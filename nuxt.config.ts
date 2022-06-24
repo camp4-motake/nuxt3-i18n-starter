@@ -1,21 +1,10 @@
 import { defineNuxtConfig } from "nuxt";
-
 const routes = ["/en/"];
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   srcDir: "src",
   ssr: false,
-  vite: {},
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: "custom",
-        path: "*",
-        component: resolve(__dirname, "pages/404.vue"),
-      });
-    },
-  },
   build: {
     postcss: {
       postcssOptions: {
@@ -27,6 +16,15 @@ export default defineNuxtConfig({
           },
         },
       },
+    },
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "custom",
+        path: "*",
+        component: resolve(__dirname, "pages/404.vue"),
+      });
     },
   },
   generate: {
