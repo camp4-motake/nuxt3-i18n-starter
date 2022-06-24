@@ -1,5 +1,12 @@
+import { join } from "path";
 import { defineNuxtConfig } from "nuxt";
-const routes = ["/en/"];
+
+const pageLists = ["/", "/about"];
+const langs = ["/", "/en"];
+let routes = [];
+langs.forEach(
+  (lang) => (routes = routes.concat(pageLists.map((page) => join(lang, page))))
+);
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -30,6 +37,5 @@ export default defineNuxtConfig({
   generate: {
     fallback: "404.html",
     routes,
-    subFolders: true,
   },
 });

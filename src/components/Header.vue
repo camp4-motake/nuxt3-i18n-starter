@@ -1,11 +1,17 @@
+<script setup lang="ts">
+const { lang } = useLang();
+</script>
+
 <template>
   <header>
     <slot name="header"> Default header content </slot>
     <nav>
-      <NuxtLink to="/">home</NuxtLink>
-      <NuxtLink to="/about/">about</NuxtLink>
-      <NuxtLink to="/en/">en</NuxtLink>
-      <NuxtLink to="/en/about/">en-about</NuxtLink>
+      <NuxtLink :to="$langPath('')">home</NuxtLink>
+      <NuxtLink :to="$langPath('about')">about</NuxtLink>
+      <NuxtLink v-if="lang !== 'en'" :to="'/en' + $route.fullPath">en</NuxtLink>
+      <NuxtLink v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
+        >ja</NuxtLink
+      >
     </nav>
   </header>
 </template>

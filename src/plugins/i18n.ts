@@ -14,4 +14,15 @@ export const i18n = createI18n({
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(i18n);
+
+  return {
+    provide: {
+      langPath: (link: string) => {
+        console.log(i18n.global);
+        return i18n.global.locale === i18n.global.fallbackLocale
+          ? `/${link}`
+          : `/${i18n.global.locale}/${link}`;
+      },
+    },
+  };
 });
