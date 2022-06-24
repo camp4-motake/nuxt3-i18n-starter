@@ -7,22 +7,19 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/eslint-module": "3.1.0",
     "eslint": "^8.18.0",
+    "eslint-plugin-nuxt": "^3.2.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^9.1.1",
     "nuxt": "3.0.0-rc.4",
-    "postcss-preset-env": "^7.7.1",
+    "postcss-preset-env": "^7.7.2",
     "postcss-scss": "^4.0.4",
     "prettier": "^2.7.1",
-    "sass": "^1.52.3",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
-    "stylelint-config-standard-scss": "^4.0.0"
+    "stylelint-config-standard": "^26.0.0"
   },
   "dependencies": {
     "ress": "^5.0.2",

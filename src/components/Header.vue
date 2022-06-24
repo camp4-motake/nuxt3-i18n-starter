@@ -10,7 +10,7 @@
   </header>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 nav {
   display: flex;
   width: 100%;

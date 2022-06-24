@@ -1,5 +1,5 @@
-@use "ress";
-@use "variables";
+@import "ress";
+@import "variables";
 
 body {
   background-color: var(--color-base);
