@@ -1,5 +1,7 @@
 import { join } from "path";
 import { defineNuxtConfig } from "nuxt";
+import { imagetools } from "vite-imagetools";
+import svgLoader from "vite-svg-loader";
 
 const pageLists = ["/", "/about"];
 const langs = ["/", "/en"];
@@ -12,6 +14,14 @@ langs.forEach(
 export default defineNuxtConfig({
   srcDir: "src",
   ssr: false,
+  app: { baseURL: "/" },
+  vite: {
+    base: "/",
+    plugins: [
+      imagetools({ exclude: ["src/public/**/*", "dist"] }),
+      svgLoader(),
+    ],
+  },
   build: {
     postcss: {
       postcssOptions: {
